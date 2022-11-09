@@ -1,0 +1,473 @@
+[
+    {
+        "id": "bc924e41f512a467",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c8bbcd37efa38ed3",
+        "type": "inject",
+        "z": "bc924e41f512a467",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"A\": 0, \"B\":1}",
+        "payloadType": "json",
+        "x": 330,
+        "y": 220,
+        "wires": [
+            [
+                "85bf50b548241262"
+            ]
+        ]
+    },
+    {
+        "id": "85bf50b548241262",
+        "type": "change",
+        "z": "bc924e41f512a467",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 260,
+        "wires": [
+            [
+                "fe35b87778933bea"
+            ]
+        ]
+    },
+    {
+        "id": "fe35b87778933bea",
+        "type": "mqtt out",
+        "z": "bc924e41f512a467",
+        "name": "",
+        "topic": "arduino",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "4ae6f187880dd120",
+        "x": 900,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "d1f99471c10f980c",
+        "type": "inject",
+        "z": "bc924e41f512a467",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"A\":1, \"B\": 0}",
+        "payloadType": "json",
+        "x": 330,
+        "y": 280,
+        "wires": [
+            [
+                "85bf50b548241262"
+            ]
+        ]
+    },
+    {
+        "id": "7a3a034b9e4698f9",
+        "type": "debug",
+        "z": "bc924e41f512a467",
+        "name": "Mensagem",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "54bd842b9ab22bc4",
+        "type": "mqtt in",
+        "z": "bc924e41f512a467",
+        "name": "",
+        "topic": "arduino",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "4ae6f187880dd120",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 520,
+        "wires": [
+            [
+                "7a3a034b9e4698f9",
+                "e7837891beda9ca6",
+                "c0e08e7cf772cc31",
+                "3e06dc38c76000f7",
+                "f9661de88cc4126d"
+            ]
+        ]
+    },
+    {
+        "id": "f971f21ac08c8043",
+        "type": "ui_chart",
+        "z": "bc924e41f512a467",
+        "name": "",
+        "group": "10ba8c198dc9b80c",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "label": "A",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1030,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e7837891beda9ca6",
+        "type": "change",
+        "z": "bc924e41f512a467",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.A",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 520,
+        "wires": [
+            [
+                "f971f21ac08c8043"
+            ]
+        ]
+    },
+    {
+        "id": "c0e08e7cf772cc31",
+        "type": "change",
+        "z": "bc924e41f512a467",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.B",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 580,
+        "wires": [
+            [
+                "e4d17a945ddac512"
+            ]
+        ]
+    },
+    {
+        "id": "3e06dc38c76000f7",
+        "type": "function",
+        "z": "bc924e41f512a467",
+        "name": "function 1",
+        "func": "msg.payload = msg.payload.A + msg.payload.B\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 640,
+        "wires": [
+            [
+                "9ed4a6208d517765"
+            ]
+        ]
+    },
+    {
+        "id": "9ed4a6208d517765",
+        "type": "ui_text",
+        "z": "bc924e41f512a467",
+        "group": "10ba8c198dc9b80c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Vagas Ocupadas",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 1070,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "e4d17a945ddac512",
+        "type": "ui_chart",
+        "z": "bc924e41f512a467",
+        "name": "",
+        "group": "10ba8c198dc9b80c",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "label": "B",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1030,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f9661de88cc4126d",
+        "type": "function",
+        "z": "bc924e41f512a467",
+        "name": "function 2",
+        "func": "msg.payload = 2 - (msg.payload.A + msg.payload.B)\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 700,
+        "wires": [
+            [
+                "311e6efc19a19f5d"
+            ]
+        ]
+    },
+    {
+        "id": "311e6efc19a19f5d",
+        "type": "ui_text",
+        "z": "bc924e41f512a467",
+        "group": "10ba8c198dc9b80c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Vagas livres",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 1050,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "6b9df96882608751",
+        "type": "inject",
+        "z": "bc924e41f512a467",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"A\":1, \"B\": 1}",
+        "payloadType": "json",
+        "x": 330,
+        "y": 340,
+        "wires": [
+            [
+                "85bf50b548241262"
+            ]
+        ]
+    },
+    {
+        "id": "d184c9401ad5c486",
+        "type": "inject",
+        "z": "bc924e41f512a467",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"A\":0, \"B\": 0}",
+        "payloadType": "json",
+        "x": 330,
+        "y": 160,
+        "wires": [
+            [
+                "85bf50b548241262"
+            ]
+        ]
+    },
+    {
+        "id": "4ae6f187880dd120",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "10ba8c198dc9b80c",
+        "type": "ui_group",
+        "name": "Dashboards",
+        "tab": "57d589a304f7c318",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "57d589a304f7c318",
+        "type": "ui_tab",
+        "name": "Dashboard",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]

@@ -1,10 +1,5 @@
-# Template para desenvolvimento e entrega de NAC
+**Nome dos alunos:** 
 
-Esse é um guia simples, o grupo pode e deve modificar o template conforme necessidade. 
-
-# Nome do projeto
-
-**nome dos alunos:** 
 Diego Ferreira RM 80263  
 Jesus Ruescas Junior RM83146  
 Marcos Vasconcellos RM 82930  
@@ -13,7 +8,6 @@ José Vitor Barbosa RM 83896
 
 **Turma:**
 4SIS
-**Ano:**
 
 ## Objetivo / descrição do Projeto
 
@@ -42,23 +36,13 @@ Flows:
 
 ## Como usar 
 
-Explique como rodar o seu projeto. Quais programas instalar, como configurar... 
+O projeto eletrônico com arduino pode ser simulado no site https://www.tinkercad.com/
 
-* Pode ser utilizado marcadores
-* Para ajudar na formatação
+E o gateway pode ser simulado através no node-red
 
-Ou qualquer outra tabulação:
+    Para instalar o node red basta ter o Node instalado e rodar o comando npm install -g --unsafe-perm node-red
 
-- [x] Youtube
-- [ ] Facebook 
-- [x] Instagram
-
-Pode adicionar algum trecho de código, por exemplo para clonar esse repositório:
-
-    cd /home/iot
-    git clone https://github.com/arnaldojr/templatenac
-    cd templatenac
-    ls
+    Após inicializar, basta importar o arquivo flows.json.
 
 
 ## Link de vídeo demonstração
