@@ -5,21 +5,36 @@ Esse é um guia simples, o grupo pode e deve modificar o template conforme neces
 # Nome do projeto
 
 **nome dos alunos:** 
+Diego Ferreira RM 80263  
+Jesus Ruescas Junior RM83146  
+Marcos Vasconcellos RM 82930  
+Thiago Cordeiro Wlian RM 82958  
+José Vitor Barbosa RM 83896  
 
 **Turma:**
-
+4SIS
 **Ano:**
 
 ## Objetivo / descrição do Projeto
 
-Explique de forma clara qual o objeto deste projeto, para que serve e comente as principais tecnologias utilizadas. 
+Criar um circuito para um estacionamento com a finalidade de monitorar as vagas.
 
 ## Diagrama do projeto
 
-Adicione uma ou mais fotos do projeto, pode ser uma imagem da arquitetura, do circuito eletrônico do Flow desenvolvido. 
+Circuito:
+<img src="/distancia_permitida.png" width="550">
+<img src="/distancia_nao_permitida.png" width="550">
+<img src="/2_vagas_livres.png" width="550">
 
-<img src="/imagem.jpg" width="550">
-
+Flows:
+<img src="/gateway_enviando_0_0.png" width="550">
+<img src="/dashboard_enviando_0_0.png" width="550">
+<img src="/gateway_enviando_0_1.png" width="550">
+<img src="/dashboard_enviando_0_1.png" width="550">
+<img src="/gateway_enviando_1_0.png" width="550">
+<img src="/dashboard_enviando_1_0.png" width="550">
+<img src="/gateway_enviando_1_1.png" width="550">
+<img src="/dashboard_enviando_1_1.png" width="550">
 
 ## Como usar 
 
@@ -43,8 +58,6 @@ Pode adicionar algum trecho de código, por exemplo para clonar esse repositóri
 
 
 ## Link de vídeo demonstração
-
-Adicione o link para assistir ao vídeo do projeto funcionando.
 
 [Link para o video youtube](https://www.youtube.com/watch?v=xva71wynxS0)
 
