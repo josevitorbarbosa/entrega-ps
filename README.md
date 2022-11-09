@@ -22,11 +22,15 @@ Criar um circuito para um estacionamento com a finalidade de monitorar as vagas.
 ## Diagrama do projeto
 
 Circuito:
+
+
 <img src="/distancia_permitida.png" width="550">
 <img src="/distancia_nao_permitida.png" width="550">
 <img src="/2_vagas_livres.png" width="550">
 
 Flows:
+
+
 <img src="/gateway_enviando_0_0.png" width="550">
 <img src="/dashboard_enviando_0_0.png" width="550">
 <img src="/gateway_enviando_0_1.png" width="550">
