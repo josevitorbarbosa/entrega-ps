@@ -36,7 +36,9 @@ Flows:
 
 ## Como usar 
 
-O projeto eletrônico com arduino pode ser simulado no site https://www.tinkercad.com/
+O projeto eletrônico com arduino pode ser simulado no site https://www.tinkercad.com/. 
+
+    O codigo utilizado encontra-se no arquivo codigo.ino
 
 E o gateway pode ser simulado através no node-red
 
@@ -47,7 +49,7 @@ E o gateway pode ser simulado através no node-red
 
 ## Link de vídeo demonstração
 
-[Link para o video youtube](https://www.youtube.com/watch?v=xva71wynxS0)
+[Link para o video youtube](https://www.youtube.com/watch?v=LqNZiDybzlU&ab_channel=Jos%C3%A9Vitor)
 
 
 ### Referências 
